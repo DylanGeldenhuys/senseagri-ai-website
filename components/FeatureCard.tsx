@@ -11,8 +11,8 @@ export default function FeatureCard({
   icon: ReactNode;
 }) {
   return (
-    <div className="card flex h-full flex-col gap-4 p-6">
-      <IconWrapper>{icon}</IconWrapper>
+    <div className="card group flex h-full flex-col gap-4 p-6">
+      <IconWrapper className="icon-animate">{icon}</IconWrapper>
       <div>
         <h3 className="text-lg font-semibold text-charcoal-900">{title}</h3>
         <p className="mt-2 text-sm text-charcoal-600">{description}</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LogoMark from "@/components/LogoMark";
 import { siteConfig } from "@/lib/site";
 
 const footerLinks = [
@@ -16,8 +17,8 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:px-10 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-forest-700 text-sm font-semibold text-white">
-              SA
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-soft">
+              <LogoMark className="h-7 w-7" />
             </span>
             <span className="text-sm font-semibold text-charcoal-900">
               SenseAgri AI

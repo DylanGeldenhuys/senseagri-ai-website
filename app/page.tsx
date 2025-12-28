@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import CTASection from "@/components/CTASection";
 import FeatureCard from "@/components/FeatureCard";
 import FAQAccordion from "@/components/FAQAccordion";
+import HeroPyramid from "@/components/HeroPyramid";
 import SectionHeader from "@/components/SectionHeader";
 import TestimonialCard from "@/components/TestimonialCard";
 import {
@@ -68,71 +69,58 @@ const faqs = [
 export default function HomePage() {
   return (
     <div>
-      <section className="section-padding bg-hero-glow">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <p className="badge">Built for South African poultry farms</p>
-            <h1 className="mt-6 text-4xl font-semibold sm:text-5xl">
+      <section className="section-padding bg-hero-glow relative flex min-h-[70vh] items-center overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <svg
+            className="ambient-contours h-full w-full"
+            viewBox="0 0 1200 640"
+            fill="none"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="contour-line" x1="0" y1="0" x2="1200" y2="0">
+                <stop offset="0%" stopColor="#2F5440" stopOpacity="0.05" />
+                <stop offset="50%" stopColor="#4F8260" stopOpacity="0.45" />
+                <stop offset="100%" stopColor="#F4B449" stopOpacity="0.12" />
+              </linearGradient>
+            </defs>
+            <path
+              className="contour-line"
+              d="M-50 160C180 100 360 220 600 160C840 100 980 210 1250 130"
+              stroke="url(#contour-line)"
+              strokeWidth="1.2"
+            />
+            <path
+              className="contour-line delay-1"
+              d="M-40 300C220 240 420 340 680 300C940 260 1020 320 1250 280"
+              stroke="url(#contour-line)"
+              strokeWidth="1.4"
+            />
+            <path
+              className="contour-line delay-2"
+              d="M-30 450C200 390 420 500 700 440C960 385 1080 470 1250 420"
+              stroke="url(#contour-line)"
+              strokeWidth="1"
+            />
+          </svg>
+        </div>
+        <div className="relative mx-auto max-w-4xl">
+          <div className="space-y-8">
+            <h1 className="hero-reveal text-4xl font-semibold sm:text-6xl">
               AI + IoT for measurable poultry farm performance.
             </h1>
-            <p className="mt-5 text-base text-charcoal-600 sm:text-lg">
-              SenseAgri AI delivers real-time telemetry, welfare monitoring, and decision support that helps farms lower losses, improve feed conversion, and protect profit margins.
+            <p className="hero-reveal delay-1 max-w-2xl text-base text-charcoal-600 sm:text-lg">
+              Real-time telemetry, welfare monitoring, and decision support built for South African poultry operations.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="hero-reveal delay-2 flex flex-wrap gap-3">
               <Button href="/contact">Book a Pilot Call</Button>
               <Button href="/how-it-works" variant="secondary">
                 See How It Works
               </Button>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-charcoal-500">
-              <span className="flex items-center gap-2">
-                <SignalIcon className="h-4 w-4" />
-                LoRaWAN + edge AI
-              </span>
-              <span className="flex items-center gap-2">
-                <BoltIcon className="h-4 w-4" />
-                Offline resilient alerts
-              </span>
-              <span className="flex items-center gap-2">
-                <ChartIcon className="h-4 w-4" />
-                ROI-focused reporting
-              </span>
-            </div>
-          </div>
-          <div className="glass-panel p-6">
-            <div className="grid gap-4">
-              <div className="rounded-2xl border border-charcoal-100 bg-white p-4">
-                <p className="text-xs font-semibold text-charcoal-500">Live Barn Snapshot</p>
-                <p className="mt-2 text-sm font-semibold text-charcoal-900">
-                  House 3 - Broilers
-                </p>
-                <div className="mt-4 grid gap-3 text-xs text-charcoal-600">
-                  <div className="flex items-center justify-between">
-                    <span>Temp stability</span>
-                    <span className="font-semibold text-forest-700">96%</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>Mortality risk</span>
-                    <span className="font-semibold text-amber-600">Low</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>FCR delta</span>
-                    <span className="font-semibold text-forest-700">-4.2%</span>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-2xl border border-forest-100 bg-forest-50 p-4">
-                <p className="text-xs font-semibold text-forest-700">Active alert</p>
-                <p className="mt-2 text-sm text-charcoal-800">
-                  Ventilation drop detected. Recommended action: adjust fan speed within 10 minutes.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-charcoal-100 bg-white p-4">
-                <p className="text-xs font-semibold text-charcoal-500">Weekly report</p>
-                <p className="mt-2 text-sm text-charcoal-700">
-                  2.8% energy savings and 1.6% mortality reduction in the pilot window.
-                </p>
-              </div>
+            <div className="hero-reveal delay-3 flex justify-center sm:justify-start">
+              <HeroPyramid />
             </div>
           </div>
         </div>
