@@ -23,7 +23,8 @@ h1, h2, h3, h4 {
 }
 
 .card {
-  @apply rounded-2xl border border-charcoal-100 bg-white/90 shadow-soft;
+  @apply rounded-2xl border border-charcoal-100 bg-white/90 shadow-soft transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-glow;
+  will-change: transform;
 }
 
 .badge {
@@ -47,4 +48,150 @@ h1, h2, h3, h4 {
 
 .glass-panel {
   @apply rounded-3xl border border-charcoal-100 bg-white/80 shadow-glow backdrop-blur;
+}
+
+.status-chip {
+  @apply inline-flex items-center gap-2 rounded-full border border-charcoal-200 bg-white/80 px-3 py-1 text-xs font-semibold text-charcoal-600;
+}
+
+.ambient-contours {
+  opacity: 0.7;
+}
+
+.contour-line {
+  stroke-dasharray: 12 18;
+  stroke-dashoffset: 0;
+  animation: contour-drift 20s linear infinite;
+}
+
+.contour-line.delay-1 {
+  animation-delay: 3s;
+}
+
+.contour-line.delay-2 {
+  animation-delay: 6s;
+}
+
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: hero-reveal 0.9s ease-out forwards;
+}
+
+.hero-reveal.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.hero-reveal.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.hero-reveal.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.hero-reveal.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.pyramid-stack {
+  --pyramid-progress: 1;
+  @apply relative h-48 w-72;
+}
+
+.pyramid-block {
+  @apply absolute left-1/2 flex items-center justify-center rounded-[26px] border border-charcoal-100 shadow-soft;
+  transform: translateX(calc(-50% + (1 - var(--pyramid-progress)) * var(--shift)))
+    translateY(calc((1 - var(--pyramid-progress)) * var(--lift)));
+  transition: transform 0.8s ease;
+}
+
+.pyramid-top {
+  @apply h-12 w-40;
+  background: linear-gradient(135deg, rgba(244, 180, 73, 0.95), rgba(244, 180, 73, 0.65));
+  top: 0;
+  @apply text-charcoal-900;
+}
+
+.pyramid-middle {
+  @apply h-14 w-52;
+  background: linear-gradient(135deg, rgba(79, 130, 96, 0.85), rgba(79, 130, 96, 0.6));
+  top: 54px;
+  @apply text-offwhite;
+}
+
+.pyramid-bottom {
+  @apply h-16 w-72;
+  background: linear-gradient(135deg, rgba(36, 67, 54, 0.9), rgba(36, 67, 54, 0.65));
+  top: 116px;
+  @apply text-offwhite;
+}
+
+.pyramid-block-content {
+  @apply flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em];
+  opacity: var(--pyramid-progress);
+  transition: opacity 0.5s ease;
+}
+
+.data-flow path {
+  stroke-dasharray: 6 10;
+  stroke-dashoffset: 0;
+  animation: flow-dash 8s linear infinite;
+}
+
+.arch-flow path {
+  stroke-dasharray: 10 14;
+  stroke-dashoffset: 0;
+  animation: flow-dash 10s linear infinite;
+}
+
+.icon-animate {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.card:hover .icon-animate {
+  transform: translateY(-2px) scale(1.02);
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -220;
+  }
+}
+
+@keyframes contour-drift {
+  to {
+    stroke-dashoffset: -320;
+  }
+}
+
+@keyframes hero-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contour-line,
+  .hero-reveal,
+  .data-flow path,
+  .arch-flow path {
+    animation: none;
+  }
+
+  .pyramid-block {
+    transition: none;
+    transform: translateX(-50%);
+  }
+
+  .pyramid-block-content {
+    opacity: 1;
+    transition: none;
+  }
+
+  .card,
+  .icon-animate {
+    transition: none;
+  }
 }

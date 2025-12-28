@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "@/components/Button";
+import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
   { label: "Solution", href: "/solution" },
@@ -20,8 +21,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-charcoal-100 bg-offwhite/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-forest-700 text-sm font-semibold text-white">
-            SA
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-soft">
+            <LogoMark className="h-7 w-7" />
           </span>
           <span className="text-sm font-semibold text-charcoal-900">
             SenseAgri AI
