@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import { CloudIcon, ShieldIcon, SignalIcon } from "@/components/Icons";
 
@@ -54,7 +55,40 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <SectionHeader
+              eyebrow="Demo app"
+              title="Explore the SenseAgri AI dashboard."
+              subtitle="Walk through live telemetry, alerts, and weekly insights in the demo environment."
+            />
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button href="https://cluck-insights-dashboard.lovable.app/" external>
+                Try the demo app
+              </Button>
+              <Button href="/contact" variant="secondary">
+                Book a walkthrough
+              </Button>
+            </div>
+          </div>
+          <div className="card p-4">
+            <div className="overflow-hidden rounded-2xl border border-charcoal-100 bg-offwhite">
+              <img
+                src="/demo-app.gif"
+                alt="SenseAgri AI demo dashboard preview"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <p className="mt-3 text-xs text-charcoal-500">
+              Live telemetry, alerts, and reporting views in the demo environment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Pilot timeline"

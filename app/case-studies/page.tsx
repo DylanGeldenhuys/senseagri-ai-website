@@ -67,7 +67,7 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl card p-8 md:flex md:items-center md:justify-between">
           <div>
             <h3 className="text-2xl font-semibold text-charcoal-900">Interested in becoming a pilot site?</h3>

@@ -5,8 +5,8 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 focus-visible:ring-offset-offwhite";
 
 const variants = {
-  primary: "bg-forest-700 text-white hover:bg-forest-600",
-  secondary: "bg-white text-forest-700 ring-1 ring-forest-200 hover:bg-forest-50",
+  primary: "bg-forest-700 text-offwhite hover:bg-forest-600",
+  secondary: "bg-forest-50 text-forest-700 ring-1 ring-forest-200 hover:bg-forest-100",
   ghost: "text-forest-700 hover:bg-forest-50"
 };
 

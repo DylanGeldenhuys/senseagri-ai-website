@@ -84,7 +84,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Comparison"

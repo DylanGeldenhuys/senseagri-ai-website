@@ -8,16 +8,16 @@ export default function LogoMark({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="amberGrad" x1="0" y1="0" x2="48" y2="0">
-          <stop offset="0%" stopColor="#f4b449" stopOpacity="0.95" />
-          <stop offset="100%" stopColor="#e09a2d" stopOpacity="0.75" />
+          <stop offset="0%" stopColor="#E06A2D" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="#E06A2D" stopOpacity="0.75" />
         </linearGradient>
         <linearGradient id="greenGrad" x1="0" y1="0" x2="48" y2="0">
-          <stop offset="0%" stopColor="#4f8260" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#2f5440" stopOpacity="0.7" />
+          <stop offset="0%" stopColor="#6F8F73" stopOpacity="0.85" />
+          <stop offset="100%" stopColor="#355A3A" stopOpacity="0.7" />
         </linearGradient>
         <linearGradient id="darkGrad" x1="0" y1="0" x2="48" y2="0">
-          <stop offset="0%" stopColor="#244336" stopOpacity="0.95" />
-          <stop offset="100%" stopColor="#151c21" stopOpacity="0.75" />
+          <stop offset="0%" stopColor="#2F4A2F" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="#1F2933" stopOpacity="0.75" />
         </linearGradient>
       </defs>
       <rect x="13" y="6" width="22" height="8" rx="4" fill="url(#amberGrad)" />
