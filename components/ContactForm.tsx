@@ -84,7 +84,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Name *
           <input
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.name}
             onChange={updateField("name")}
             required
@@ -93,7 +93,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Company *
           <input
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.company}
             onChange={updateField("company")}
             required
@@ -104,7 +104,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Email *
           <input
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             type="email"
             value={formData.email}
             onChange={updateField("email")}
@@ -114,7 +114,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Phone / WhatsApp
           <input
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.phone}
             onChange={updateField("phone")}
           />
@@ -124,7 +124,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Province
           <input
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.province}
             onChange={updateField("province")}
           />
@@ -132,7 +132,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Farm type
           <select
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.farmType}
             onChange={updateField("farmType")}
           >
@@ -145,7 +145,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold text-charcoal-800">
           Bird count range
           <select
-            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+            className="mt-2 w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
             value={formData.birdCount}
             onChange={updateField("birdCount")}
           >
@@ -160,14 +160,14 @@ export default function ContactForm() {
       <label className="text-sm font-semibold text-charcoal-800">
         Message *
         <textarea
-          className="mt-2 min-h-[140px] w-full rounded-xl border border-charcoal-200 bg-white px-3 py-2 text-sm"
+          className="mt-2 min-h-[140px] w-full rounded-xl border border-charcoal-200 bg-offwhite px-3 py-2 text-sm"
           value={formData.message}
           onChange={updateField("message")}
           required
         />
       </label>
       {status === "error" && error ? (
-        <p className="text-sm text-red-600">{error}</p>
+        <p className="text-sm text-amber-500">{error}</p>
       ) : null}
       {status === "success" ? (
         <p className="text-sm text-forest-700">

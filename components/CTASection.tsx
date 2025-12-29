@@ -20,7 +20,7 @@ export default function CTASection({
       <div className="glass-panel px-6 py-10 sm:px-10">
         <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-semibold sm:text-4xl">{title}</h2>
+            <h2 className="text-3xl font-light sm:text-4xl">{title}</h2>
             <p className="mt-3 text-sm text-charcoal-600 sm:text-base">
               {subtitle}
             </p>

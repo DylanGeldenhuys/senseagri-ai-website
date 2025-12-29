@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Sora, Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Analytics from "@/components/Analytics";
+import { Analytics } from "@vercel/analytics/next";
 
-const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"]
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${sora.variable} ${manrope.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body>
         <Analytics />
         <div className="min-h-screen bg-offwhite">

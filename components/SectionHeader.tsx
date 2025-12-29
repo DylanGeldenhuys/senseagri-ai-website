@@ -16,7 +16,7 @@ export default function SectionHeader({
   return (
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow ? <p className="badge mb-4">{eyebrow}</p> : null}
-      <h2 className="text-3xl font-semibold sm:text-4xl">{title}</h2>
+      <h2 className="text-3xl font-light sm:text-4xl">{title}</h2>
       {subtitle ? (
         <p className="mt-4 text-base text-charcoal-600 sm:text-lg">
           {subtitle}

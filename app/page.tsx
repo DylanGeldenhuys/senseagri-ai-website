@@ -80,9 +80,9 @@ export default function HomePage() {
           >
             <defs>
               <linearGradient id="contour-line" x1="0" y1="0" x2="1200" y2="0">
-                <stop offset="0%" stopColor="#2F5440" stopOpacity="0.05" />
-                <stop offset="50%" stopColor="#4F8260" stopOpacity="0.45" />
-                <stop offset="100%" stopColor="#F4B449" stopOpacity="0.12" />
+                <stop offset="0%" stopColor="#2F4A2F" stopOpacity="0.05" />
+                <stop offset="50%" stopColor="#6F8F73" stopOpacity="0.45" />
+                <stop offset="100%" stopColor="#E06A2D" stopOpacity="0.12" />
               </linearGradient>
             </defs>
             <path
@@ -107,7 +107,7 @@ export default function HomePage() {
         </div>
         <div className="relative mx-auto max-w-4xl">
           <div className="space-y-8">
-            <h1 className="hero-reveal text-4xl font-semibold sm:text-6xl">
+            <h1 className="hero-reveal text-4xl font-light sm:text-6xl">
               AI + IoT for measurable poultry farm performance.
             </h1>
             <p className="hero-reveal delay-1 max-w-2xl text-base text-charcoal-600 sm:text-lg">
@@ -132,10 +132,10 @@ export default function HomePage() {
             Built for South African farms
           </p>
           <div className="grid gap-3 text-sm text-charcoal-500 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-xl border border-charcoal-100 bg-white p-4">Agripak (placeholder)</div>
-            <div className="rounded-xl border border-charcoal-100 bg-white p-4">LNX (placeholder)</div>
-            <div className="rounded-xl border border-charcoal-100 bg-white p-4">PoultryCo (placeholder)</div>
-            <div className="rounded-xl border border-charcoal-100 bg-white p-4">VitaFeed (placeholder)</div>
+            <div className="rounded-xl border border-charcoal-100 bg-forest-50 p-4">Agripak (placeholder)</div>
+            <div className="rounded-xl border border-charcoal-100 bg-forest-50 p-4">LNX (placeholder)</div>
+            <div className="rounded-xl border border-charcoal-100 bg-forest-50 p-4">PoultryCo (placeholder)</div>
+            <div className="rounded-xl border border-charcoal-100 bg-forest-50 p-4">VitaFeed (placeholder)</div>
           </div>
         </div>
       </section>
@@ -193,7 +193,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Measured outcomes"
@@ -247,7 +247,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Modules"
@@ -322,7 +322,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-forest-50">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="FAQ"

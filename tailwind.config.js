@@ -5,47 +5,47 @@ module.exports = {
     extend: {
       colors: {
         forest: {
-          50: "#f2f7f3",
-          100: "#dfece2",
-          200: "#bed8c4",
-          300: "#97bca1",
-          400: "#6b9e7b",
-          500: "#4f8260",
-          600: "#3c6b4d",
-          700: "#2f5440",
-          800: "#244336",
-          900: "#1b3229"
+          50: "#DCE7DE",
+          100: "#DCE7DE",
+          200: "#6F8F73",
+          300: "#6F8F73",
+          400: "#355A3A",
+          500: "#355A3A",
+          600: "#2F4A2F",
+          700: "#2F4A2F",
+          800: "#2F4A2F",
+          900: "#2F4A2F"
         },
         charcoal: {
-          50: "#f5f6f7",
-          100: "#e3e7ea",
-          200: "#c4ccd1",
-          300: "#9aa7b1",
-          400: "#6f7f8b",
-          500: "#55636e",
-          600: "#3f4a53",
-          700: "#2f3840",
-          800: "#232b31",
-          900: "#151c21"
+          50: "#F6F8F7",
+          100: "#DCE7DE",
+          200: "#DCE7DE",
+          300: "#1F2933",
+          400: "#1F2933",
+          500: "#1F2933",
+          600: "#1F2933",
+          700: "#1F2933",
+          800: "#1F2933",
+          900: "#1F2933"
         },
-        offwhite: "#f6f4ef",
+        offwhite: "#F6F8F7",
         amber: {
-          400: "#f4b449",
-          500: "#e09a2d",
-          600: "#c68117"
-        }
+          400: "#E06A2D",
+          500: "#E06A2D",
+          600: "#E06A2D"
+        },
+        signal: "#6FCF97"
       },
       fontFamily: {
-        display: ["var(--font-sora)", "ui-sans-serif", "system-ui"],
-        sans: ["var(--font-manrope)", "ui-sans-serif", "system-ui"]
+        sans: ["var(--font-inter)"]
       },
       boxShadow: {
-        soft: "0 16px 60px rgba(21, 28, 33, 0.12)",
-        glow: "0 0 0 1px rgba(79, 130, 96, 0.18), 0 12px 30px rgba(36, 67, 54, 0.2)"
+        soft: "0 16px 60px rgba(31, 41, 51, 0.12)",
+        glow: "0 0 0 1px rgba(53, 90, 58, 0.2), 0 12px 30px rgba(47, 74, 47, 0.2)"
       },
       backgroundImage: {
-        "hero-glow": "radial-gradient(circle at 15% 15%, rgba(79, 130, 96, 0.18), transparent 55%), radial-gradient(circle at 80% 10%, rgba(244, 180, 73, 0.15), transparent 45%)",
-        "section-fade": "linear-gradient(180deg, rgba(246, 244, 239, 0.9), rgba(246, 244, 239, 0))"
+        "hero-glow": "radial-gradient(circle at 15% 15%, rgba(53, 90, 58, 0.18), transparent 55%), radial-gradient(circle at 80% 10%, rgba(224, 106, 45, 0.15), transparent 45%)",
+        "section-fade": "linear-gradient(180deg, rgba(246, 248, 247, 0.9), rgba(246, 248, 247, 0))"
       }
     }
   },
