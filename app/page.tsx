@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-4xl">
           <div className="space-y-8">
             <h1 className="hero-reveal text-4xl font-light sm:text-6xl">
-              AI + IoT for measurable poultry farm performance.
+              Welcome to SenseAgri
             </h1>
             <p className="hero-reveal delay-1 max-w-2xl text-base text-charcoal-600 sm:text-lg">
               Real-time telemetry, welfare monitoring, and decision support built for South African poultry operations.
