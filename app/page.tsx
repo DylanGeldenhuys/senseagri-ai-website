@@ -148,10 +148,10 @@ export default function HomePage() {
             className="font-display font-bold tracking-tight text-white/90"
             style={{ fontSize: "1.05rem", lineHeight: 1.35, maxWidth: "60ch" }}
           >
-            AI poultry monitoring and welfare intelligence for your farm, however big.
+            AI poultry monitoring and welfare intelligence for your farm.
           </h2>
           <p className="mt-3 font-sans text-white/70 leading-relaxed" style={{ fontSize: "0.9375rem", maxWidth: "68ch" }}>
-            SenseAgri AI is a poultry decision-intelligence platform for your farm, however big. Your farm data becomes intelligence that keeps getting better — understanding what makes your farm productive, preventing losses, recording your actions, updating records, and managing tasks on the farm. Less labour. Less expense. More time to grow your business.
+            SenseAgri AI is a poultry intelligence platform for your farm. Your farm data becomes intelligence that keeps getting better — understanding what makes your farm productive, preventing losses, recording your actions, updating records, managing tasks on the farm, and tuning set points on your existing control systems (SKOV, Big Dutchman, and others). Less labour. Less expense. More time to grow your business.
           </p>
         </div>
       </div>

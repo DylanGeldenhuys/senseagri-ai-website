@@ -782,8 +782,8 @@ export default function WhatYouGet() {
         idx="01"
         label="Sensing"
         title="Your farm's heartbeat, measured continuously."
-        body="Environmental sensors, cameras, acoustics, ammonia and CO₂ — a full pulse read of your farm's rhythm, running around the clock. Subscribe to the hardware or own it outright — the choice is yours."
-        chips={["Multi-modal", "Subscribe or own", "24/7 capture"]}
+        body="Environmental sensors, cameras, acoustics, ammonia and CO₂ — a full pulse read of your farm's rhythm, running around the clock. We're hardware-agnostic — bring your own sensors from any vendor, or we supply at the lowest cost possible."
+        chips={["Multi-modal", "Hardware-agnostic", "24/7 capture"]}
         mock={<SensingPanel />}
       />
       <Block
