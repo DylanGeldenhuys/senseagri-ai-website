@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/faq" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 const faqs = [
@@ -111,7 +111,7 @@ export default function FAQPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors duration-150 hover:bg-primary-container"
+              className="inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-white transition-colors duration-150 hover:bg-primary-container"
               style={{ background: PRIMARY, boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
             >
               Get in touch

@@ -73,7 +73,7 @@ export default function HeroSlideshow() {
             style={{
               height: "5px",
               width: i === current ? "22px" : "5px",
-              background: i === current ? "#D4AF37" : "rgba(255,255,255,0.35)",
+              background: i === current ? "#58C9C5" : "rgba(255,255,255,0.35)",
               border: "none",
               padding: 0,
               cursor: "pointer",

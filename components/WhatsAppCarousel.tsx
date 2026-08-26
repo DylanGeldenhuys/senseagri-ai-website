@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 // Auto-advancing image carousel for the WhatsApp screenshots on the About page.
 // Pauses on hover/focus and respects prefers-reduced-motion.
 
-const G = "#D4AF37";
+const G = "#13AAA5";
 
 export type WhatsAppShot = {
   src: string;

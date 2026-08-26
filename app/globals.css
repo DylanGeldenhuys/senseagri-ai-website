@@ -14,7 +14,76 @@ body {
   @apply bg-surface text-on-surface font-sans antialiased;
 }
 
-/* All headings use Manrope — tight tracking, architectural authority */
+/* Teal is used as light and depth, not as a flat decorative accent. */
+.intelligence-text-gradient {
+  color: #58C9C5;
+  background: linear-gradient(96deg, #A6E2DF 0%, #58C9C5 34%, #13AAA5 76%, #58C9C5 112%);
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-intelligence-wash {
+  background:
+    radial-gradient(ellipse 46% 70% at 84% 40%, rgba(166,226,223, 0.24) 0%, rgba(88,201,197, 0.13) 28%, transparent 70%),
+    radial-gradient(ellipse 34% 52% at 68% 72%, rgba(19,170,165, 0.16) 0%, transparent 72%),
+    linear-gradient(112deg, transparent 48%, rgba(0, 63, 74, 0.12) 72%, rgba(8,124,131, 0.2) 112%);
+}
+
+/* Localized digital-twin atmosphere. The mist gathers around information,
+   never across the entire canvas, so petrol remains authoritative. */
+.intelligence-mist {
+  z-index: 0;
+  opacity: 0.62;
+  background:
+    radial-gradient(ellipse 55% 48% at 52% 48%, rgba(88, 201, 197, 0.18) 0%, rgba(166, 226, 223, 0.12) 34%, rgba(225, 243, 241, 0.08) 52%, transparent 76%),
+    radial-gradient(ellipse 38% 54% at 68% 38%, rgba(19, 170, 165, 0.12) 0%, transparent 72%);
+  filter: blur(18px);
+  transform: translate3d(0, 0, 0) scale(1.02);
+  animation: intelligence-mist-drift 24s ease-in-out infinite alternate;
+}
+
+.intelligence-mist::after {
+  content: "";
+  position: absolute;
+  inset: 16% 8% 4% 18%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(88, 201, 197, 0.14) 0%, rgba(19, 170, 165, 0.05) 42%, transparent 72%);
+  filter: blur(24px);
+}
+
+.intelligence-mist-dark {
+  opacity: 0.48;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(ellipse 55% 48% at 52% 48%, rgba(88, 201, 197, 0.24) 0%, rgba(19, 170, 165, 0.12) 34%, transparent 74%),
+    radial-gradient(ellipse 36% 52% at 68% 38%, rgba(166, 226, 223, 0.12) 0%, transparent 72%);
+}
+
+@keyframes intelligence-mist-drift {
+  0% { transform: translate3d(-1.5%, 1%, 0) scale(1.01); }
+  100% { transform: translate3d(2%, -1.5%, 0) scale(1.06); }
+}
+
+.intelligence-mock-stage {
+  position: relative;
+  isolation: isolate;
+}
+
+.intelligence-mock-stage::before {
+  content: "";
+  position: absolute;
+  inset: 8% -5%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(88,201,197, 0.2) 0%, rgba(19,170,165, 0.08) 38%, transparent 72%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+/* Headings use Manrope with disciplined spacing; weight supplies hierarchy,
+   without making every display line shout. */
 h1, h2, h3, h4 {
   @apply font-display text-on-surface;
 }
@@ -47,7 +116,7 @@ h1, h2, h3, h4 {
 
 .pillar-card:hover {
   @apply bg-white;
-  border-top-color: #D4AF37;
+  border-top-color: #13AAA5;
 }
 
 /* Feature card: gold left-border slides in on hover */
@@ -59,7 +128,7 @@ h1, h2, h3, h4 {
 
 .feature-card:hover {
   @apply bg-white;
-  border-left-color: #D4AF37;
+  border-left-color: #13AAA5;
 }
 
 /* ─── Badges / Labels ─────────────────────────────────────────────────── */
@@ -69,7 +138,7 @@ h1, h2, h3, h4 {
   @apply inline-flex items-center gap-2 bg-surface-container px-3 py-1
     font-sans text-label-sm font-medium uppercase tracking-[0.05em] text-primary;
   /* 0px radius — sharp industrial aesthetic; left-border is the visual anchor */
-  border-left: 2px solid #D4AF37;
+  border-left: 2px solid #13AAA5;
 }
 
 /* ─── Links ───────────────────────────────────────────────────────────── */
@@ -106,7 +175,7 @@ h1, h2, h3, h4 {
   background-color: #002E35;
   color: #ffffff;
   /* 2px tertiary (gold) bottom accent — "Gold Precision" signature, consistent with page CTAs */
-  box-shadow: inset 0 -2px 0 0 #D4AF37;
+  box-shadow: inset 0 -2px 0 0 #13AAA5;
   transition: background-color 150ms linear;
 }
 .btn-primary:hover {
@@ -168,7 +237,7 @@ h1, h2, h3, h4 {
 .ai-chip {
   background-color: #003F4A;
   color: #ffffff;
-  border-left: 0.5px solid #D4AF37;
+  border-left: 0.5px solid #13AAA5;
   @apply inline-flex items-center gap-2 px-3 py-1
     font-sans text-label-sm font-medium uppercase tracking-[0.05em];
 }
@@ -222,6 +291,52 @@ h1, h2, h3, h4 {
 .grid-overlay > * {
   position: relative;
   z-index: 1;
+}
+
+/* ─── Intelligence field ─────────────────────────────────────────────── */
+/* Sparse telemetry network: a quiet intelligence layer, never a backdrop spectacle. */
+
+.intelligence-field {
+  opacity: 0.16;
+  overflow: visible;
+}
+
+.intelligence-field-dark {
+  opacity: 0.24;
+}
+
+.intelligence-field-line {
+  opacity: 0.6;
+}
+
+.intelligence-field-line-1,
+.intelligence-field-line-2 {
+  stroke-dasharray: 0.025 0.018;
+  animation: intelligence-signal 22s linear infinite;
+}
+
+.intelligence-field-line-2 { animation-delay: -9s; }
+.intelligence-field-line-3 { opacity: 0.34; }
+
+.intelligence-field-node { opacity: 0.72; }
+
+.intelligence-field-pulse {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: intelligence-pulse 5.5s ease-out infinite;
+}
+
+.intelligence-field-pulse:nth-child(2n) { animation-delay: -2.4s; }
+
+@keyframes intelligence-signal {
+  to { stroke-dashoffset: -1; }
+}
+
+@keyframes intelligence-pulse {
+  0%, 64%, 100% { opacity: 0; transform: scale(0.25); }
+  72% { opacity: 0.3; }
+  90% { opacity: 0; transform: scale(1.8); }
 }
 
 /* ─── Hairline utility ────────────────────────────────────────────────── */
@@ -319,9 +434,9 @@ h1, h2, h3, h4 {
   color: #191C1D;
   width: 134px;
   height: 64px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.08));
+  background: linear-gradient(135deg, rgba(19,170,165, 0.25), rgba(19,170,165, 0.08));
   /* 0.5px gold left-border — AI Chip aesthetic */
-  border-left: 0.5px solid #D4AF37;
+  border-left: 0.5px solid #13AAA5;
   top: 89px;
 }
 
@@ -450,7 +565,7 @@ h1, h2, h3, h4 {
   top: -8px;
   left: -8px;
   background: #002E35;
-  color: #D4AF37;
+  color: #13AAA5;
   font-family: var(--font-manrope), sans-serif;
   font-size: 9px;
   font-weight: 800;
@@ -476,7 +591,7 @@ h1, h2, h3, h4 {
   height: 1.5px;
   margin-top: 25px;
   position: relative;
-  background-image: repeating-linear-gradient(to right, #D4AF37 0 5px, transparent 5px 13px);
+  background-image: repeating-linear-gradient(to right, #13AAA5 0 5px, transparent 5px 13px);
   background-size: 18px 1.5px;
   animation: wyg-flow 0.75s linear infinite;
 }
@@ -489,7 +604,7 @@ h1, h2, h3, h4 {
   transform: translateY(-50%);
   border-top: 3.5px solid transparent;
   border-bottom: 3.5px solid transparent;
-  border-left: 5px solid #D4AF37;
+  border-left: 5px solid #13AAA5;
 }
 
 @keyframes wyg-flow   { to { background-position: 18px 0; } }
@@ -506,7 +621,7 @@ h1, h2, h3, h4 {
     min-width: 0;
     margin-top: 0;
     margin-left: 25px;
-    background-image: repeating-linear-gradient(to bottom, #D4AF37 0 5px, transparent 5px 13px);
+    background-image: repeating-linear-gradient(to bottom, #13AAA5 0 5px, transparent 5px 13px);
     background-size: 1.5px 18px;
     animation: wyg-flow-v 0.75s linear infinite;
   }
@@ -518,7 +633,7 @@ h1, h2, h3, h4 {
     transform: translateX(-50%);
     border-left: 3.5px solid transparent;
     border-right: 3.5px solid transparent;
-    border-top: 5px solid #D4AF37;
+    border-top: 5px solid #13AAA5;
     border-bottom: 0;
   }
 }
@@ -549,7 +664,7 @@ h1, h2, h3, h4 {
 }
 
 .flow-stage { transition: border-color 180ms ease; }
-.flow-stage:hover { border-top-color: #D4AF37; }
+.flow-stage:hover { border-top-color: #13AAA5; }
 
 @media (max-width: 860px) {
   .flow-header { grid-template-columns: 1fr; gap: 24px; align-items: start; }
@@ -684,7 +799,7 @@ h1, h2, h3, h4 {
   --sa-teal: #1F7E8C;
   --sa-teal-deep: #0F5663;
   --sa-teal-line: #2C8896;
-  --sa-gold: #9A7A1C;
+  --sa-gold: #13AAA5;
   --sa-green: #3C8B5B;
   --sa-red: #CB4434;
   --sa-header: #08191D;
@@ -877,9 +992,9 @@ h1, h2, h3, h4 {
   top: -19px;
   width: 38px;
   height: 38px;
-  border: 1.5px solid rgba(212, 175, 55, 0.95);
+  border: 1.5px solid rgba(88,201,197, 0.95);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16);
+  box-shadow: 0 0 0 4px rgba(88,201,197, 0.16);
   animation: live-pulse 2.6s ease-out infinite;
 }
 
@@ -890,7 +1005,7 @@ h1, h2, h3, h4 {
   top: -0.5px;
   width: 26px;
   height: 1px;
-  background: rgba(212, 175, 55, 0.9);
+  background: rgba(88,201,197, 0.9);
 }
 
 /* Label sits to the left of the ring (flipped left so it stays in frame). */
@@ -904,7 +1019,7 @@ h1, h2, h3, h4 {
   padding: 5px 9px;
   white-space: nowrap;
   background: rgba(4, 18, 22, 0.55);
-  border: 0.5px solid rgba(212, 175, 55, 0.45);
+  border: 0.5px solid rgba(88,201,197, 0.45);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   font-family: var(--font-inter), sans-serif;
@@ -917,12 +1032,12 @@ h1, h2, h3, h4 {
 .sensing-gw-dot {
   width: 5px;
   height: 5px;
-  background: #D4AF37;
+  background: #13AAA5;
 }
 
 @keyframes live-pulse {
-  0%        { box-shadow: 0 0 0 0   rgba(212, 175, 55, 0.55); }
-  70%, 100% { box-shadow: 0 0 0 7px rgba(212, 175, 55, 0); }
+  0%        { box-shadow: 0 0 0 0   rgba(88,201,197, 0.55); }
+  70%, 100% { box-shadow: 0 0 0 7px rgba(88,201,197, 0); }
 }
 
 /* SensorWheel positioned lower-left, white halo behind so the right-hand
@@ -1000,8 +1115,8 @@ h1, h2, h3, h4 {
   95% {
     box-shadow:
       0 4px 14px rgba(0, 46, 53, 0.08),
-      0 0 18px 0 rgba(212, 175, 55, 0.42);
-    border-color: rgba(212, 175, 55, 0.55);
+      0 0 18px 0 rgba(88,201,197, 0.42);
+    border-color: rgba(88,201,197, 0.55);
   }
 }
 
@@ -1021,7 +1136,8 @@ h1, h2, h3, h4 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .contour-line, .hero-reveal, .tag-reveal, .data-flow path, .wyg-pl-conn { animation: none; }
+  .contour-line, .hero-reveal, .tag-reveal, .data-flow path, .wyg-pl-conn,
+  .intelligence-field-line, .intelligence-field-pulse, .intelligence-mist { animation: none; }
   .tag-reveal { opacity: 1; transform: translateX(0); }
 
   .pyramid-block, .pyramid-dot {

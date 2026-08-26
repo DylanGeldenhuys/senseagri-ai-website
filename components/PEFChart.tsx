@@ -23,12 +23,12 @@ export default function PEFChart() {
         <svg viewBox="0 0 390 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <defs>
             <linearGradient id="pef-stroke-grad" x1="20" y1="0" x2="370" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0%"   stopColor="#2A8E9A" />
-              <stop offset="100%" stopColor="#D4AF37" />
+              <stop offset="0%"   stopColor="#087C83" />
+              <stop offset="100%" stopColor="#58C9C5" />
             </linearGradient>
             <linearGradient id="pef-area-grad" x1="0" y1="20" x2="0" y2="165" gradientUnits="userSpaceOnUse">
-              <stop offset="0%"   stopColor="#2A8E9A" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.22" />
+              <stop offset="0%"   stopColor="#087C83" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#58C9C5" stopOpacity="0.22" />
             </linearGradient>
           </defs>
 
@@ -46,8 +46,8 @@ export default function PEFChart() {
           <text x="15" y="156" textAnchor="end" fontSize="7" fill="#6B7C80" fontFamily="Inter, sans-serif">63</text>
 
           {/* "No intervention" annotation */}
-          <line x1="185" y1="58" x2="185" y2="20" stroke="#D4AF37" strokeWidth="0.5" strokeDasharray="3 4" strokeOpacity="0.6" />
-          <text x="187" y="17" fontSize="7" fill="#D4AF37" fontFamily="Inter, sans-serif" opacity="0.75">No intervention</text>
+          <line x1="185" y1="58" x2="185" y2="20" stroke="#58C9C5" strokeWidth="0.5" strokeDasharray="3 4" strokeOpacity="0.6" />
+          <text x="187" y="17" fontSize="7" fill="#58C9C5" fontFamily="Inter, sans-serif" opacity="0.75">No intervention</text>
 
           {/* Area fill */}
           <path d={areaPath} fill="url(#pef-area-grad)" className="pef-area-fade" />
@@ -57,8 +57,8 @@ export default function PEFChart() {
             strokeLinecap="round" className="pef-line-draw" />
 
           {/* Start dot */}
-          <circle cx="20" cy="30" r="3" fill="#2A8E9A" className="pef-area-fade" />
-          <text x="26" y="26" fontSize="8" fill="#2A8E9A" fontWeight="bold" fontFamily="Inter, sans-serif" className="pef-area-fade">PEF 94</text>
+          <circle cx="20" cy="30" r="3" fill="#087C83" className="pef-area-fade" />
+          <text x="26" y="26" fontSize="8" fill="#087C83" fontWeight="bold" fontFamily="Inter, sans-serif" className="pef-area-fade">PEF 94</text>
 
           {/* End dot — radiating alert */}
           <g className="pef-area-fade">

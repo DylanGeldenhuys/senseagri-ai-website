@@ -153,7 +153,7 @@ export default function ContactForm() {
       {status === "success" ? (
         <p
           className="font-sans text-title-sm px-3 py-2 text-primary"
-          style={{ background: "rgba(0,46,53,0.06)", borderLeft: "2px solid #D4AF37" }}
+          style={{ background: "rgba(0,46,53,0.06)", borderLeft: "2px solid #13AAA5" }}
         >
           Thanks, we will get back to you within one business day.
         </p>

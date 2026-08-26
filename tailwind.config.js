@@ -8,8 +8,8 @@ module.exports = {
         // Primary: Petrol Teal — anchor colour, high-intent actions
         primary: "#002E35",
         "primary-container": "#003F4A",
-        // Light teal — accent on deep navy backgrounds ("lighter shade of primary")
-        "primary-light": "#2A8E9A",
+        // Live-signal aqua — high-contrast accent on deep navy backgrounds
+        "primary-light": "#58C9C5",
         "on-primary": "#ffffff",
 
         // Secondary: Deep Navy — "Control Room" for footer & dark breakouts
@@ -18,10 +18,15 @@ module.exports = {
         "on-secondary": "#ffffff",
         "on-secondary-variant": "#7A9BA8",
 
-        // Tertiary: Gold/Amber — "Pathfinder", < 5% screen usage
-        tertiary: "#D4AF37",
-        "tertiary-container": "#F5E8A0",
-        "on-tertiary": "#191C1D",
+        // Intelligence spectrum — sensing, active intelligence, and bright signal
+        sensing: "#087C83",
+        intelligence: "#13AAA5",
+        signal: "#58C9C5",
+        "signal-pale": "#A6E2DF",
+        "signal-wash": "#E1F3F1",
+        tertiary: "#13AAA5",
+        "tertiary-container": "#A6E2DF",
+        "on-tertiary": "#002E35",
 
         // Surface hierarchy — tonal layering, no drop shadows
         surface: "#F8FAFA",
@@ -54,8 +59,8 @@ module.exports = {
           300: "#3F4849", 400: "#3F4849", 500: "#3F4849",
           600: "#3F4849", 700: "#191C1D", 800: "#191C1D", 900: "#191C1D"
         },
-        amber: { 400: "#D4AF37", 500: "#D4AF37", 600: "#D4AF37" },
-        signal: "#2A8E9A"
+        // Amber remains reserved for operational warning states
+        amber: { 400: "#D99A2B", 500: "#C78318", 600: "#A86610" }
       },
 
       fontFamily: {
@@ -66,15 +71,15 @@ module.exports = {
       },
 
       fontSize: {
-        "display-lg": ["3.5rem",  { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "display-md": ["2.75rem", { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
-        "display-sm": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        "display-lg": ["3.5rem",  { lineHeight: "1.05", letterSpacing: "-0.025em" }],
+        "display-md": ["2.75rem", { lineHeight: "1.1",  letterSpacing: "-0.025em" }],
+        "display-sm": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.025em" }],
         "title-lg":   ["1.5rem",  { lineHeight: "1.3"  }],
         "title-md":   ["1.125rem",{ lineHeight: "1.4"  }],
         "title-sm":   ["0.875rem",{ lineHeight: "1.4"  }],
-        // Labels: ALL CAPS + 0.05em tracking — mimics serial numbers on industrial equipment
-        "label-md":   ["0.8125rem",{ lineHeight: "1.5", letterSpacing: "0.05em" }],
-        "label-sm":   ["0.6875rem",{ lineHeight: "1.5", letterSpacing: "0.06em" }]
+        // Labels: quiet navigation precision; micro-labels opt into wider tracking.
+        "label-md":   ["0.8125rem",{ lineHeight: "1.5", letterSpacing: "0.04em" }],
+        "label-sm":   ["0.6875rem",{ lineHeight: "1.5", letterSpacing: "0.05em" }]
       },
 
       boxShadow: {

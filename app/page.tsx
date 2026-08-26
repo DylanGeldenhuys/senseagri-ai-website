@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LogoMark from "@/components/LogoMark";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import IntelligenceField from "@/components/IntelligenceField";
 import WhatYouGet from "@/components/WhatYouGet";
 import ImpactSlider, { type ImpactStory } from "@/components/ImpactSlider";
 
@@ -9,8 +10,7 @@ export const metadata: Metadata = {
 };
 
 // ─── Brand colours (used as inline styles where Tailwind purges) ─────────────
-const PRIMARY = "#002E35";
-const GOLD = "#D4AF37";
+const GOLD = "#58C9C5";
 
 // ─── Stats strip ───────────────────────────────────────────────────────────
 const statsStrip = [
@@ -75,12 +75,18 @@ export default function HomePage() {
           }}
         />
 
+        {/* Layered teal light connects the physical photography to the intelligence field. */}
+        <div className="hero-intelligence-wash pointer-events-none absolute inset-0 z-[1]" />
+        <div className="intelligence-mist intelligence-mist-dark pointer-events-none absolute -right-[8%] top-[10%] z-[1] h-[72%] w-[58%]" />
+
+        <IntelligenceField dark className="pointer-events-none absolute inset-y-0 right-0 z-[1] h-full w-[68%] opacity-[0.28]" />
+
         {/* Blueprint grid */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.06) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.06) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.07) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.07) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
@@ -93,9 +99,9 @@ export default function HomePage() {
             <div className="hero-reveal mb-6">
               <span
                 className="inline-flex items-center gap-2 px-3 py-1"
-                style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(212,175,55,0.10)" }}
+                style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(88,201,197,0.10)" }}
               >
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-tertiary">
+                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-tertiary">
                   South Africa&apos;s Poultry Intelligence Platform
                 </span>
               </span>
@@ -103,11 +109,11 @@ export default function HomePage() {
 
             {/* Headline */}
             <h1
-              className="hero-reveal delay-1 font-display font-extrabold tracking-tighter text-white"
-              style={{ fontSize: "clamp(2.35rem, 5.5vw, 5.2rem)", lineHeight: "0.97", maxWidth: "14ch" }}
+              className="hero-reveal delay-1 font-display font-bold text-white"
+              style={{ fontSize: "clamp(2.35rem, 5.5vw, 5.2rem)", lineHeight: "0.98", letterSpacing: "-0.028em", maxWidth: "14ch" }}
             >
               Intelligence<br />
-              <span style={{ color: GOLD }}>for your farm.</span>
+              <span className="intelligence-text-gradient">for your farm.</span>
             </h1>
 
             {/* Sub */}
@@ -123,14 +129,14 @@ export default function HomePage() {
             <div className="hero-reveal delay-3 mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/contact"
-                className="inline-flex w-full items-center justify-center px-6 py-3 font-sans text-sm font-bold uppercase tracking-[0.08em] text-primary bg-white transition-colors duration-150 hover:bg-surface-container-low sm:w-auto"
+                className="inline-flex w-full items-center justify-center px-6 py-3 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-primary bg-white transition-colors duration-150 hover:bg-surface-container-low sm:w-auto"
                 style={{ boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
               >
                 Book a Demo
               </a>
               <a
                 href="/solution"
-                className="inline-flex w-full items-center justify-center px-6 py-3 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors duration-150 hover:bg-white/10 sm:w-auto"
+                className="inline-flex w-full items-center justify-center px-6 py-3 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-white transition-colors duration-150 hover:bg-white/10 sm:w-auto"
                 style={{ border: "1.5px solid rgba(255,255,255,0.55)" }}
               >
                 See the Platform →
@@ -142,7 +148,7 @@ export default function HomePage() {
       </section>
 
       {/* Answer-first lede — keyword-bearing H2 + plain-language definition, dark band flows into stats strip */}
-      <div className="bg-primary px-6 sm:px-10 lg:px-16" style={{ paddingTop: 32, paddingBottom: 28 }}>
+      <div className="px-6 sm:px-10 lg:px-16" style={{ paddingTop: 32, paddingBottom: 28, background: "linear-gradient(105deg, #002E35 0%, #003F4A 58%, #087C83 145%)" }}>
         <div className="mx-auto max-w-6xl">
           <h2
             className="font-display font-bold tracking-tight text-white/90"
@@ -157,12 +163,12 @@ export default function HomePage() {
       </div>
 
       {/* Stats strip — petrol band, gold values */}
-      <div className="bg-primary px-6 sm:px-10 lg:px-16" style={{ paddingTop: 18, paddingBottom: 18, borderBottom: "0.5px solid rgba(212,175,55,0.18)" }}>
+      <div className="px-6 sm:px-10 lg:px-16" style={{ paddingTop: 18, paddingBottom: 18, borderBottom: "0.5px solid rgba(88,201,197,0.22)", background: "linear-gradient(105deg, #002E35 0%, #003F4A 68%, rgba(8,124,131,0.96) 145%)" }}>
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4">
           {statsStrip.map(({ v, l }) => (
             <div key={l} className="flex items-baseline gap-2">
               <span className="font-display font-extrabold tracking-tight" style={{ fontSize: "1.2rem", color: GOLD }}>{v}</span>
-              <span className="font-sans text-[9px] font-bold uppercase tracking-[0.12em] text-white/65">{l}</span>
+              <span className="font-sans text-[9px] font-semibold uppercase tracking-[0.14em] text-white/65">{l}</span>
             </div>
           ))}
         </div>
@@ -178,7 +184,11 @@ export default function HomePage() {
       ═══════════════════════════════════════════════════════════════════ */}
       <section
         className="relative overflow-hidden px-6 sm:px-10 lg:px-16"
-        style={{ background: "#F2F4F4", padding: "clamp(64px, 6vw, 104px) 24px", borderTop: "0.5px solid #BEC8CA" }}
+        style={{
+          background: "radial-gradient(ellipse 65% 75% at 88% 18%, rgba(88,201,197,0.18) 0%, rgba(166,226,223,0.08) 34%, transparent 68%), linear-gradient(135deg, #F8FAFA 0%, #F2F7F7 52%, #EAF5F4 100%)",
+          padding: "clamp(64px, 6vw, 104px) 24px",
+          borderTop: "0.5px solid #BEC8CA"
+        }}
       >
         <div
           className="absolute inset-0 pointer-events-none"
@@ -188,6 +198,8 @@ export default function HomePage() {
             backgroundSize: "24px 24px"
           }}
         />
+        <IntelligenceField className="pointer-events-none absolute -right-24 top-0 h-[70%] w-[62%] opacity-[0.14]" />
+        <div className="intelligence-mist pointer-events-none absolute -right-[10%] top-[2%] h-[58%] w-[52%]" />
         <div className="relative mx-auto max-w-6xl reveal">
 
           {/* Header (left-aligned) */}
@@ -196,13 +208,13 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 self-start px-3 py-1"
               style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
             >
-              <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
                 Pilot stories
               </span>
             </span>
             <h2
-              className="font-display font-extrabold tracking-tighter text-primary"
-              style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05", maxWidth: "20ch" }}
+              className="font-display font-semibold text-primary"
+              style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.08", letterSpacing: "-0.022em", maxWidth: "20ch" }}
             >
               What pilot partners are seeing.
             </h2>
@@ -220,7 +232,7 @@ export default function HomePage() {
               &ldquo;We finally have one source of truth for barn conditions and response actions.
               The alerts helped us respond to ventilation drops before bird stress escalated.&rdquo;
             </p>
-            <div className="font-sans text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: "#6B7C80" }}>
+            <div className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em]" style={{ color: "#6B7C80" }}>
               Pilot Manager · Operations · Large Poultry Group
             </div>
           </div>
@@ -235,23 +247,25 @@ export default function HomePage() {
       ═══════════════════════════════════════════════════════════════════ */}
       <section
         className="grain relative overflow-hidden px-6 py-20 md:py-28 sm:px-10 lg:px-16"
-        style={{ background: PRIMARY }}
+        style={{ background: "radial-gradient(ellipse 62% 105% at 82% 42%, rgba(19,170,165,0.23) 0%, rgba(8,124,131,0.12) 35%, transparent 72%), linear-gradient(120deg, #0F172A 0%, #002E35 52%, #003F4A 100%)" }}
       >
         {/* Blueprint grid */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.08) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.08) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
+        <IntelligenceField dark className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.2]" />
+        <div className="intelligence-mist intelligence-mist-dark pointer-events-none absolute -right-[6%] top-[6%] h-[88%] w-[54%]" />
 
         {/* Gold radial glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 60% 80% at 80% 50%, rgba(212,175,55,0.06) 0%, transparent 70%)"
+            background: "radial-gradient(ellipse 60% 80% at 80% 50%, rgba(88,201,197,0.09) 0%, transparent 70%)"
           }}
         />
 
@@ -260,32 +274,32 @@ export default function HomePage() {
 
           <span
             className="mb-8 inline-flex items-center gap-2 border-l-2 border-tertiary px-3 py-1"
-            style={{ background: "rgba(212,175,55,0.10)" }}
+            style={{ background: "rgba(88,201,197,0.10)" }}
           >
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-tertiary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-tertiary">
               Partner Programme
             </span>
           </span>
 
           <h2
-            className="font-display font-extrabold tracking-tighter text-white"
+            className="font-display font-semibold tracking-[-0.025em] text-white"
             style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)", lineHeight: "0.95" }}
           >
             Stop guessing.<br />
-            <span style={{ color: GOLD }}>Start measuring.</span>
+            <span className="intelligence-text-gradient">Start measuring.</span>
           </h2>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 font-sans text-xs font-bold uppercase tracking-[0.12em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
+              className="inline-flex items-center justify-center px-10 py-4 font-sans text-xs font-semibold uppercase tracking-[0.10em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
               style={{ boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
             >
               Book a Demo
             </a>
             <a
               href="/solution"
-              className="inline-flex items-center justify-center px-10 py-4 font-sans text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors duration-150 hover:bg-white/10"
+              className="inline-flex items-center justify-center px-10 py-4 font-sans text-xs font-semibold uppercase tracking-[0.10em] text-white transition-colors duration-150 hover:bg-white/10"
               style={{ border: "1.5px solid rgba(255,255,255,0.55)" }}
             >
               See the System

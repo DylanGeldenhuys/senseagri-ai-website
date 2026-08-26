@@ -12,7 +12,7 @@ const modules = [
     footer: "Continuous · Barn-Level",
     Icon: SignalIcon,
     bg: "#0F172A",
-    accent: "#2A8E9A",
+    accent: "#087C83",
     fromLeft: true,
     image: "/telem.png",
     imageAlt: "Farm telemetry monitoring",
@@ -25,7 +25,7 @@ const modules = [
     footer: "Edge-Resilient · Always On",
     Icon: AlertIcon,
     bg: "#002E35",
-    accent: "#D4AF37",
+    accent: "#13AAA5",
     fromLeft: false,
     image: "/image.jpeg",
     imageAlt: "Edge AI compute board",
@@ -38,7 +38,7 @@ const modules = [
     footer: "Decisions · ROI-Verified",
     Icon: ChartIcon,
     bg: "#0F172A",
-    accent: "#2A8E9A",
+    accent: "#087C83",
     fromLeft: true,
     image: "/on_this_picture_please_keep_th_Grok_Imagine_47814.jpg",
     imageAlt: "SenseAgri AIOS chip",
@@ -141,7 +141,7 @@ function ModuleCard({ mod, index }: { mod: (typeof modules)[0]; index: number })
               <mod.Icon className="h-6 w-6" />
             </div>
             <span
-              className="font-sans text-[9px] font-bold uppercase tracking-[0.12em]"
+              className="font-sans text-[9px] font-semibold uppercase tracking-[0.14em]"
               style={{ color: mod.accent }}
             >
               {mod.id}
@@ -150,7 +150,7 @@ function ModuleCard({ mod, index }: { mod: (typeof modules)[0]; index: number })
 
           {/* Body */}
           <div>
-            <h3 className="font-display text-title-lg font-bold tracking-tight text-white">
+            <h3 className="font-display text-title-lg font-semibold tracking-[-0.02em] text-white">
               {mod.title}
             </h3>
             <p className="mt-3 font-sans text-title-sm leading-relaxed text-white/55">
@@ -164,7 +164,7 @@ function ModuleCard({ mod, index }: { mod: (typeof modules)[0]; index: number })
             style={{ borderColor: "rgba(255,255,255,0.08)" }}
           >
             <span
-              className="font-sans text-[9px] font-bold uppercase tracking-[0.12em]"
+              className="font-sans text-[9px] font-semibold uppercase tracking-[0.14em]"
               style={{ color: mod.accent }}
             >
               {mod.footer}
@@ -205,11 +205,11 @@ export default function SolutionScroll() {
       <div className="bg-surface-container-low px-6 py-14 sm:px-10 lg:px-16">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
               Solution Architecture
             </span>
             <h2
-              className="mt-3 font-display font-extrabold tracking-tighter text-primary"
+              className="mt-3 font-display font-semibold tracking-[-0.025em] text-primary"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", lineHeight: "1.05" }}
             >
               From sensing to<br />decision support.

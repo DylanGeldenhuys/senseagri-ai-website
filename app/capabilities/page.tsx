@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/capabilities" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 type Capability = {
@@ -98,12 +98,12 @@ export default function CapabilitiesPage() {
                 className="mb-6 inline-flex items-center gap-2 px-3 py-1"
                 style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
               >
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
                   {c.eyebrow}
                 </span>
               </span>
               <h2
-                className="font-display font-extrabold tracking-tighter text-primary"
+                className="font-display font-semibold tracking-[-0.025em] text-primary"
                 style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05" }}
               >
                 {c.title}
@@ -138,21 +138,21 @@ export default function CapabilitiesPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.08) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.08) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <span
             className="mb-6 inline-flex items-center gap-2 border-l-2 border-tertiary px-3 py-1"
-            style={{ background: "rgba(212,175,55,0.10)" }}
+            style={{ background: "rgba(19,170,165,0.10)" }}
           >
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-tertiary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-tertiary">
               Partner Programme
             </span>
           </span>
           <h2
-            className="font-display font-extrabold tracking-tighter text-white"
+            className="font-display font-semibold tracking-[-0.025em] text-white"
             style={{ fontSize: "clamp(1.9rem, 3.6vw, 2.9rem)", lineHeight: 1.04 }}
           >
             See these capabilities in your own houses.
@@ -162,7 +162,7 @@ export default function CapabilitiesPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
+            className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
             style={{ boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
           >
             Book a Demo

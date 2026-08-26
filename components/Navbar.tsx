@@ -24,50 +24,52 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-surface/90 backdrop-blur-[20px] hairline-b">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 sm:px-10">
 
-        {/* Brand — mark + wordmark + tagline */}
-        <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center bg-secondary">
-            <LogoMark className="h-6 w-6" />
+        {/* Brand prototype — existing mark, lighter precision wordmark */}
+        <Link href="/" className="flex items-center gap-3.5">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center bg-secondary sm:h-10 sm:w-10">
+            <LogoMark className="h-7 w-7 sm:h-8 sm:w-8" />
           </span>
           <div className="flex flex-col items-start text-left leading-none">
-            <span className="font-display text-sm font-extrabold tracking-[-0.02em] text-primary uppercase">
-              SenseAgri AI
+            <span className="flex items-baseline whitespace-nowrap font-display text-[14px] font-medium uppercase tracking-[0.18em] text-primary sm:text-[15px]">
+              <span>SENSE</span>
+              <span className="text-sensing">AGRI</span>
+              <span className="ml-[0.32em] text-[0.64em] tracking-[0.14em] text-primary/65">AI</span>
             </span>
-            <span className="mt-0.5 font-sans text-[8px] font-bold uppercase tracking-[0.15em] text-tertiary">
+            <span className="mt-1.5 whitespace-nowrap font-sans text-[7px] font-medium uppercase tracking-[0.17em] text-tertiary sm:text-[8px]">
               Every signal. Every decision.
             </span>
           </div>
         </Link>
 
-        {/* Desktop nav — ALL CAPS labels, gold underline on active */}
-        <nav className="hidden items-center gap-7 md:flex">
+        {/* Desktop nav — quiet, precise labels */}
+        <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative font-display text-[11px] font-bold uppercase tracking-[0.08em] transition-colors duration-150 py-1
+                className={`relative font-sans text-[10px] font-medium uppercase tracking-[0.06em] transition-colors duration-150 py-1
                   ${active ? "text-tertiary" : "text-on-surface-variant hover:text-primary"}`}
               >
                 {link.label}
                 {/* Gold 0.5px bottom line on active */}
                 {active && (
-                  <span className="absolute -bottom-px left-0 w-full" style={{ height: "0.5px", background: "#D4AF37" }} />
+                  <span className="absolute -bottom-px left-0 w-full" style={{ height: "0.5px", background: "#13AAA5" }} />
                 )}
               </Link>
             );
           })}
         </nav>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <Button href="/contact">Book a Demo</Button>
         </div>
 
         {/* Mobile menu button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center p-2 text-on-surface md:hidden"
+          className="inline-flex items-center justify-center p-2 text-on-surface lg:hidden"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -97,7 +99,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`border-l-2 py-2.5 pl-3 font-display text-[13px] font-bold uppercase tracking-[0.08em] transition-colors duration-150
+                  className={`border-l-2 py-2.5 pl-3 font-sans text-[12px] font-medium uppercase tracking-[0.06em] transition-colors duration-150
                     ${active ? "border-tertiary text-primary" : "border-transparent text-on-surface-variant"}`}
                   onClick={() => setOpen(false)}
                 >
