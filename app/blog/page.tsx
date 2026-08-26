@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 type Post = {
@@ -114,7 +114,7 @@ export default function BlogIndexPage() {
                     </div>
 
                     {/* Title */}
-                    <h2 className="font-display text-xl font-extrabold tracking-tight text-on-surface transition-colors duration-150 group-hover:text-primary">
+                    <h2 className="font-display text-xl font-semibold tracking-[-0.02em] text-on-surface transition-colors duration-150 group-hover:text-primary">
                       {post.title}
                     </h2>
 
@@ -124,7 +124,7 @@ export default function BlogIndexPage() {
                     </p>
 
                     {/* Read more */}
-                    <div className="mt-1 font-sans text-sm font-bold uppercase tracking-[0.08em] text-primary">
+                    <div className="mt-1 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-primary">
                       Read →
                     </div>
                   </div>
@@ -149,13 +149,13 @@ export default function BlogIndexPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.08) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.08) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
         <div className="relative z-10 mx-auto max-w-xl">
           <h2
-            className="font-display font-extrabold tracking-tighter text-white"
+            className="font-display font-semibold tracking-[-0.025em] text-white"
             style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)", lineHeight: "1.05" }}
           >
             Want to see the platform on your farm?
@@ -165,7 +165,7 @@ export default function BlogIndexPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
+            className="mt-6 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
             style={{ boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
           >
             Book a Demo

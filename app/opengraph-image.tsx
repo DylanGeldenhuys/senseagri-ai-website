@@ -49,13 +49,13 @@ export default function OpenGraphImage() {
             <div
               style={{
                 display: "flex",
-                borderLeft: "2px solid #D4AF37",
+                borderLeft: "2px solid #13AAA5",
                 paddingLeft: 14,
                 paddingTop: 4,
                 paddingBottom: 4,
                 fontSize: 18,
                 fontWeight: 700,
-                color: "#D4AF37",
+                color: "#13AAA5",
                 letterSpacing: 2.5,
                 textTransform: "uppercase"
               }}

@@ -4,15 +4,16 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import type { ReactNode, ReactElement } from "react";
 import LogoMark from "@/components/LogoMark";
 import DashboardCard from "@/components/DashboardCard";
+import IntelligenceField from "@/components/IntelligenceField";
 
 // "Inside the platform" — Sensing (wheel) → Dashboard+AI → WhatsApp Alerts (dark) → Weekly Reports → Integrations
 // NOTE: the dashboard / phone / report mockups are illustrative representations of the
 // live SenseAgri client app — swap with real screenshots when available.
 
 const P = "#002E35";
-const G = "#D4AF37";
+const G = "#13AAA5";
 const N = "#0F172A";
-const TEAL = "#2A8E9A";
+const TEAL = "#087C83";
 
 // ── Eyebrow ──────────────────────────────────────────────────────────────────
 function Eyebrow({ children, dark }: { children: ReactNode; dark?: boolean }) {
@@ -24,7 +25,7 @@ function Eyebrow({ children, dark }: { children: ReactNode; dark?: boolean }) {
         gap: 8,
         padding: "4px 12px",
         borderLeft: `2px solid ${G}`,
-        background: dark ? "rgba(212,175,55,0.10)" : "rgba(0,46,53,0.06)",
+        background: dark ? "rgba(19,170,165,0.10)" : "rgba(0,46,53,0.06)",
         marginBottom: 14
       }}
     >
@@ -32,9 +33,9 @@ function Eyebrow({ children, dark }: { children: ReactNode; dark?: boolean }) {
         style={{
           fontFamily: "var(--font-inter), sans-serif",
           fontSize: 10,
-          fontWeight: 700,
+          fontWeight: 600,
           textTransform: "uppercase",
-          letterSpacing: "0.14em",
+          letterSpacing: "0.16em",
           color: dark ? G : P
         }}
       >
@@ -608,11 +609,14 @@ function Block({
   reverse?: boolean;
   dark?: boolean;
 }) {
-  const blockBg = dark ? N : "#F8FAFA";
+  const fieldSide = reverse ? "18%" : "82%";
+  const blockBg = dark
+    ? `radial-gradient(ellipse 58% 90% at ${fieldSide} 50%, rgba(19,170,165,0.20) 0%, rgba(8,124,131,0.08) 42%, transparent 72%), linear-gradient(125deg, #0F172A 0%, #002E35 100%)`
+    : `radial-gradient(ellipse 58% 90% at ${fieldSide} 50%, rgba(88,201,197,0.17) 0%, rgba(166,226,223,0.07) 42%, transparent 72%), linear-gradient(125deg, #F8FAFA 0%, #F1F7F6 100%)`;
   const textColor = dark ? "#fff" : P;
   const bodyColor = dark ? "rgba(255,255,255,0.72)" : "#3F4849";
-  const chipBg = dark ? "rgba(212,175,55,0.08)" : "rgba(0,46,53,0.07)";
-  const chipBorder = dark ? "0.5px solid rgba(212,175,55,0.25)" : "0.5px solid rgba(0,46,53,0.15)";
+  const chipBg = dark ? "rgba(19,170,165,0.10)" : "rgba(0,46,53,0.07)";
+  const chipBorder = dark ? "0.5px solid rgba(88,201,197,0.28)" : "0.5px solid rgba(0,46,53,0.15)";
   const chipColor = dark ? "rgba(255,255,255,0.92)" : P;
 
   return (
@@ -625,6 +629,20 @@ function Block({
         overflow: "hidden"
       }}
     >
+      <IntelligenceField
+        dark={dark}
+        className={`pointer-events-none absolute inset-y-0 h-full w-[62%] ${reverse ? "left-0" : "right-0"}`}
+      />
+      <div
+        className={`intelligence-mist pointer-events-none absolute ${dark ? "intelligence-mist-dark" : ""}`}
+        style={{
+          top: "12%",
+          left: reverse ? "-8%" : "auto",
+          right: reverse ? "auto" : "-8%",
+          width: "56%",
+          height: "76%"
+        }}
+      />
       {dark && (
         <div
           style={{
@@ -649,7 +667,7 @@ function Block({
           fontFamily: "var(--font-manrope), sans-serif",
           fontWeight: 800,
           fontSize: "clamp(82px, 9vw, 120px)",
-          color: dark ? "rgba(212,175,55,0.09)" : "rgba(0,46,53,0.07)",
+          color: dark ? "rgba(88,201,197,0.09)" : "rgba(0,46,53,0.07)",
           letterSpacing: "-0.05em",
           lineHeight: 0.8,
           pointerEvents: "none",
@@ -669,11 +687,11 @@ function Block({
           <h3
             style={{
               fontFamily: "var(--font-manrope), sans-serif",
-              fontWeight: 800,
+              fontWeight: 600,
               fontSize: "clamp(1.45rem, 2.5vw, 2.05rem)",
               color: textColor,
               lineHeight: 1.05,
-              letterSpacing: "-0.02em",
+              letterSpacing: "-0.025em",
               marginBottom: 14
             }}
           >
@@ -698,9 +716,9 @@ function Block({
                 style={{
                   fontFamily: "var(--font-inter), sans-serif",
                   fontSize: 9,
-                  fontWeight: 700,
+                  fontWeight: 600,
                   textTransform: "uppercase",
-                  letterSpacing: "0.08em",
+                  letterSpacing: "0.1em",
                   padding: "4px 9px",
                   background: chipBg,
                   color: chipColor,
@@ -714,7 +732,7 @@ function Block({
           </div>
         </div>
         <div style={{ order: reverse ? 1 : 2, display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <div className="wyg-mock">{mock}</div>
+          <div className="wyg-mock intelligence-mock-stage">{mock}</div>
         </div>
       </div>
     </div>
@@ -734,7 +752,7 @@ function IntegrationStrip() {
         padding: "44px 24px",
         position: "relative",
         overflow: "hidden",
-        borderTop: "0.5px solid rgba(212,175,55,0.2)"
+        borderTop: "0.5px solid rgba(88,201,197,0.22)"
       }}
     >
       <div

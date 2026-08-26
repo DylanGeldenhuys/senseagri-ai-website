@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/solution" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 const stages = [
@@ -58,7 +58,7 @@ function Eyebrow({ children }: { children: string }) {
       className="mb-6 inline-flex items-center gap-2 px-3 py-1"
       style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
     >
-      <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+      <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
         {children}
       </span>
     </span>
@@ -85,7 +85,7 @@ export default function SolutionPage() {
             <div>
               <Eyebrow>Architecture</Eyebrow>
               <h2
-                className="font-display font-extrabold tracking-tighter text-primary"
+                className="font-display font-semibold tracking-[-0.025em] text-primary"
                 style={{ fontSize: "clamp(1.85rem, 3.4vw, 2.7rem)", lineHeight: 1.04 }}
               >
                 How it all connects.
@@ -118,7 +118,7 @@ export default function SolutionPage() {
         <div className="mx-auto max-w-6xl">
           <Eyebrow>The operating loop</Eyebrow>
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.85rem, 3.4vw, 2.7rem)", lineHeight: 1.04 }}
           >
             Capture. Interpret. Act.
@@ -131,7 +131,7 @@ export default function SolutionPage() {
             {stages.map((s) => (
               <div key={s.n} className="flex flex-col bg-surface-container-lowest px-7 py-8">
                 <div className="flex items-center gap-3">
-                  <span className="font-display text-2xl font-extrabold tracking-tight" style={{ color: GOLD }}>
+                  <span className="font-display text-2xl font-semibold tracking-[-0.02em]" style={{ color: GOLD }}>
                     {s.n}
                   </span>
                   <span style={{ width: 18, height: 1, background: GOLD }} />
@@ -149,7 +149,7 @@ export default function SolutionPage() {
         <div className="mx-auto max-w-6xl">
           <Eyebrow>Built for the field</Eyebrow>
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.85rem, 3.4vw, 2.7rem)", lineHeight: 1.04 }}
           >
             Engineered to run on real farms.
@@ -175,21 +175,21 @@ export default function SolutionPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.08) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.08) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.08) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <span
             className="mb-6 inline-flex items-center gap-2 border-l-2 border-tertiary px-3 py-1"
-            style={{ background: "rgba(212,175,55,0.10)" }}
+            style={{ background: "rgba(19,170,165,0.10)" }}
           >
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-tertiary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-tertiary">
               Partner Programme
             </span>
           </span>
           <h2
-            className="font-display font-extrabold tracking-tighter text-white"
+            className="font-display font-semibold tracking-[-0.025em] text-white"
             style={{ fontSize: "clamp(1.9rem, 3.6vw, 2.9rem)", lineHeight: 1.04 }}
           >
             See the loop run on your own houses.
@@ -200,7 +200,7 @@ export default function SolutionPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
+            className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-primary transition-colors duration-150 hover:bg-surface-container-low bg-white"
             style={{ boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
           >
             Book a Demo

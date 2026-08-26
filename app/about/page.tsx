@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 const values = [
@@ -81,12 +81,12 @@ export default function AboutPage() {
               className="mb-6 inline-flex items-center gap-2 px-3 py-1"
               style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
             >
-              <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
                 Mission
               </span>
             </span>
             <h2
-              className="font-display font-extrabold tracking-tighter text-primary"
+              className="font-display font-semibold tracking-[-0.025em] text-primary"
               style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05" }}
             >
               Closing the intelligence gap in African agriculture.
@@ -113,12 +113,12 @@ export default function AboutPage() {
             className="mb-6 inline-flex items-center gap-2 px-3 py-1"
             style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
           >
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
               Founders
             </span>
           </span>
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05" }}
           >
             Meet the team behind the platform.
@@ -148,7 +148,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="font-display text-lg font-bold tracking-tight text-on-surface">{name}</p>
-                    <p className="mt-1 font-sans text-[9px] font-bold uppercase tracking-[0.12em] text-on-surface-variant">
+                    <p className="mt-1 font-sans text-[9px] font-semibold uppercase tracking-[0.14em] text-on-surface-variant">
                       {role}
                     </p>
                     {credentials ? (
@@ -174,7 +174,7 @@ export default function AboutPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(42,142,154,0.07) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(42,142,154,0.07) 0.5px, transparent 0.5px)",
+              "linear-gradient(to right, rgba(8,124,131,0.07) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(8,124,131,0.07) 0.5px, transparent 0.5px)",
             backgroundSize: "24px 24px"
           }}
         />
@@ -183,14 +183,14 @@ export default function AboutPage() {
           <div className="mb-10">
             <span
               className="mb-6 inline-flex items-center gap-2 border-l-2 border-tertiary px-3 py-1"
-              style={{ background: "rgba(212,175,55,0.10)" }}
+              style={{ background: "rgba(19,170,165,0.10)" }}
             >
-              <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-tertiary">
+              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-tertiary">
                 Our story
               </span>
             </span>
             <h2
-              className="font-display font-extrabold tracking-tighter text-white"
+              className="font-display font-semibold tracking-[-0.025em] text-white"
               style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05" }}
             >
               How SenseAgri AI began.
@@ -234,12 +234,12 @@ export default function AboutPage() {
             className="mb-6 inline-flex items-center gap-2 px-3 py-1"
             style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
           >
-            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
               Values
             </span>
           </span>
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.7rem, 3vw, 2.4rem)", lineHeight: "1.05" }}
           >
             What we stand for.
@@ -259,7 +259,7 @@ export default function AboutPage() {
       <section className="px-6 py-16 sm:px-10 lg:px-16 text-center" style={{ background: "#F2F4F4", borderTop: "0.5px solid #BEC8CA" }}>
         <div className="mx-auto max-w-xl">
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)", lineHeight: "1.05" }}
           >
             Want to partner with us?
@@ -269,7 +269,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors duration-150 hover:bg-primary-container"
+            className="mt-6 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-white transition-colors duration-150 hover:bg-primary-container"
             style={{ background: PRIMARY, boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
           >
             Get in touch

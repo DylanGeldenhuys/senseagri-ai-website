@@ -12,7 +12,7 @@ export default function TestimonialCard({
   return (
     <div
       className="flex h-full flex-col justify-between gap-8 bg-surface-container-lowest px-8 py-8 transition-colors duration-150 hover:bg-white"
-      style={{ borderLeft: "2px solid #D4AF37" }}
+      style={{ borderLeft: "2px solid #13AAA5" }}
     >
       {/* Large decorative quote mark — gold, ultra-low opacity */}
       <div className="relative">

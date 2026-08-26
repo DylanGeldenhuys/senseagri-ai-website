@@ -20,7 +20,7 @@ const C = {
   grid: "#EDF1F1",
   teal: "#2C8896",
   tealDeep: "#16606E",
-  gold: "#B0881C",
+  gold: "#13AAA5",
   green: "#3C8B5B",
   red: "#CB4434",
   bandGreen: "#DBEAE0",

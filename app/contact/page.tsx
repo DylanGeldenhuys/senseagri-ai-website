@@ -32,7 +32,7 @@ export default function ContactPage() {
             className="bg-surface-container-lowest px-6 py-8 sm:px-8"
             style={{ border: "0.5px solid #BEC8CA" }}
           >
-            <h2 className="font-display text-title-lg font-bold tracking-tight text-on-surface">
+            <h2 className="font-display text-title-lg font-semibold tracking-[-0.02em] text-on-surface">
               Start the conversation
             </h2>
             <p className="mt-2 font-sans text-title-sm text-on-surface-variant">
@@ -49,7 +49,7 @@ export default function ContactPage() {
               className="bg-surface-container-lowest px-8 py-7"
               style={{ border: "0.5px solid #BEC8CA" }}
             >
-              <h2 className="font-display text-title-md font-bold tracking-tight text-on-surface">
+              <h2 className="font-display text-title-md font-semibold tracking-[-0.02em] text-on-surface">
                 Book a call
               </h2>
               <p className="mt-2 font-sans text-title-sm text-on-surface-variant">
@@ -68,14 +68,14 @@ export default function ContactPage() {
               className="bg-surface-container-lowest px-8 py-7"
               style={{ border: "0.5px solid #BEC8CA" }}
             >
-              <h2 className="font-display text-title-md font-bold tracking-tight text-on-surface">
+              <h2 className="font-display text-title-md font-semibold tracking-[-0.02em] text-on-surface">
                 Contact details
               </h2>
               <div className="mt-4">
                 <p className="font-display text-base font-bold tracking-tight text-on-surface">
                   Dr Ryan Nel
                 </p>
-                <p className="mt-1 font-sans text-[9px] font-bold uppercase tracking-[0.12em] text-tertiary">
+                <p className="mt-1 font-sans text-[9px] font-semibold uppercase tracking-[0.14em] text-tertiary">
                   Co-Founder &amp; COO
                 </p>
               </div>

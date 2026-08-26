@@ -23,8 +23,10 @@ export default function Footer() {
             <span className="flex h-14 w-14 items-center justify-center bg-secondary-container">
               <LogoMark className="h-10 w-10" />
             </span>
-            <span className="font-display text-2xl font-extrabold uppercase tracking-[-0.02em] text-on-secondary">
-              SenseAgri AI
+            <span className="flex items-baseline font-display text-lg font-medium uppercase tracking-[0.2em] text-on-secondary">
+              <span>SENSE</span>
+              <span className="text-signal">AGRI</span>
+              <span className="ml-[0.32em] text-[0.62em] tracking-[0.14em] text-on-secondary/55">AI</span>
             </span>
           </div>
           <p className="mt-4 font-sans text-title-sm text-on-secondary-variant">
@@ -34,7 +36,7 @@ export default function Footer() {
 
         <div>
           {/* ALL CAPS label — industrial serial number style */}
-          <p className="font-sans text-sm font-bold uppercase tracking-[0.08em] text-on-secondary">
+          <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-on-secondary">
             Explore
           </p>
           <div className="mt-4 grid gap-2.5">
@@ -51,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-sans text-sm font-bold uppercase tracking-[0.08em] text-on-secondary">
+          <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-on-secondary">
             Contact
           </p>
           <div className="mt-4 grid gap-2.5 font-sans text-title-sm text-on-secondary-variant">
@@ -90,7 +92,7 @@ export default function Footer() {
             © {new Date().getFullYear()} SenseAgri AI. All rights reserved.
           </p>
           {/* Brand tagline */}
-          <p className="font-sans text-label-sm font-bold uppercase tracking-[0.15em] text-tertiary">
+          <p className="font-sans text-label-sm font-medium uppercase tracking-[0.17em] text-tertiary">
             Every signal. Every decision.
           </p>
         </div>

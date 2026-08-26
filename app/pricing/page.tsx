@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pricing" }
 };
 
-const GOLD = "#D4AF37";
+const GOLD = "#13AAA5";
 const PRIMARY = "#002E35";
 
 const earlyPerks = [
@@ -50,12 +50,12 @@ export default function PricingPage() {
               className="mb-6 inline-flex items-center gap-2 px-3 py-1"
               style={{ borderLeft: `2px solid ${GOLD}`, background: "rgba(0,46,53,0.06)" }}
             >
-              <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
                 Partner Programme
               </span>
             </span>
             <h2
-              className="font-display font-extrabold tracking-tighter text-primary"
+              className="font-display font-semibold tracking-[-0.025em] text-primary"
               style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)", lineHeight: "1.05" }}
             >
               More than a sensor supplier.<br />
@@ -66,7 +66,7 @@ export default function PricingPage() {
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors duration-150 hover:bg-primary-container"
+              className="mt-8 inline-flex items-center justify-center px-8 py-3.5 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-white transition-colors duration-150 hover:bg-primary-container"
               style={{ background: PRIMARY, boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
             >
               Book a Demo
@@ -114,7 +114,7 @@ export default function PricingPage() {
       <section className="bg-surface-container-low px-6 py-16 sm:px-10 lg:px-16" style={{ borderTop: "0.5px solid #BEC8CA" }}>
         <div className="mx-auto max-w-xl text-center">
           <h2
-            className="font-display font-extrabold tracking-tighter text-primary"
+            className="font-display font-semibold tracking-[-0.025em] text-primary"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", lineHeight: "1.05" }}
           >
             Ready to be an early partner?
@@ -124,7 +124,7 @@ export default function PricingPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center justify-center px-10 py-4 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors duration-150 hover:bg-primary-container"
+            className="mt-8 inline-flex items-center justify-center px-10 py-4 font-sans text-sm font-semibold uppercase tracking-[0.06em] text-white transition-colors duration-150 hover:bg-primary-container"
             style={{ background: PRIMARY, boxShadow: `inset 0 -2px 0 0 ${GOLD}` }}
           >
             Book a Demo

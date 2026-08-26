@@ -18,8 +18,8 @@ export default function SectionHeader({
       {eyebrow ? (
         <p className="badge mb-6">{eyebrow}</p>
       ) : null}
-      {/* Manrope display font, font-medium — size creates hierarchy, not weight */}
-      <h2 className="font-display text-display-sm font-medium text-on-surface sm:text-display-md">
+      {/* Refined display hierarchy — confident weight, disciplined spacing. */}
+      <h2 className="font-display text-display-sm font-semibold tracking-[-0.025em] text-on-surface sm:text-display-md">
         {title}
       </h2>
       {subtitle ? (

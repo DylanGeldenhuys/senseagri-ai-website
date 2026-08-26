@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const P = "#002E35";
-const G = "#D4AF37";
+const G = "#13AAA5";
 
 export type ImpactStory = {
   tag: string;
@@ -77,9 +77,9 @@ export default function ImpactSlider({
                   style={{
                     fontFamily: "var(--font-inter), sans-serif",
                     fontSize: 10,
-                    fontWeight: 700,
+                    fontWeight: 600,
                     textTransform: "uppercase",
-                    letterSpacing: "0.14em",
+                    letterSpacing: "0.16em",
                     color: P,
                     marginBottom: 14,
                     borderLeft: `2px solid ${G}`,
@@ -91,11 +91,11 @@ export default function ImpactSlider({
                 <h4
                   style={{
                     fontFamily: "var(--font-manrope), sans-serif",
-                    fontWeight: 800,
+                    fontWeight: 600,
                     fontSize: "clamp(1.4rem, 2.4vw, 1.95rem)",
                     color: P,
                     lineHeight: 1.1,
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.025em",
                     marginBottom: 16
                   }}
                 >
