@@ -106,8 +106,8 @@ export default function HomePage() {
               className="hero-reveal delay-1 font-display font-extrabold tracking-tighter text-white"
               style={{ fontSize: "clamp(2.35rem, 5.5vw, 5.2rem)", lineHeight: "0.97", maxWidth: "14ch" }}
             >
-              Know Your Flock.<br />
-              <span style={{ color: GOLD }}>Know Your Farm.</span>
+              Intelligence<br />
+              <span style={{ color: GOLD }}>for your farm.</span>
             </h1>
 
             {/* Sub */}
@@ -115,8 +115,8 @@ export default function HomePage() {
               className="hero-reveal delay-2 mt-6 font-sans text-white/70"
               style={{ fontSize: "1rem", lineHeight: "1.6", maxWidth: "46ch" }}
             >
-              Continuous sensing and causal AI — so you understand why, not
-              just what.
+              Insight to see the problem before it costs you, and the
+              confidence to act — through precision AI farming.
             </p>
 
             {/* CTAs */}
@@ -148,10 +148,10 @@ export default function HomePage() {
             className="font-display font-bold tracking-tight text-white/90"
             style={{ fontSize: "1.05rem", lineHeight: 1.35, maxWidth: "60ch" }}
           >
-            AI poultry monitoring and welfare intelligence for commercial farms.
+            AI poultry monitoring and welfare intelligence for your farm.
           </h2>
           <p className="mt-3 font-sans text-white/70 leading-relaxed" style={{ fontSize: "0.9375rem", maxWidth: "68ch" }}>
-            SenseAgri AI is a poultry decision-intelligence platform for commercial farms in South Africa. Sensor data becomes causal insights, WhatsApp alerts, and weekly ROI reports — so operators understand why production changes, not just what.
+            SenseAgri AI is a poultry intelligence platform for your farm. Your farm data becomes intelligence that keeps getting better — understanding what makes your farm productive, preventing losses, recording your actions, updating records, managing tasks on the farm, and tuning set points on your existing control systems (SKOV, Big Dutchman, and others). Less labour. Less expense. More time to grow your business.
           </p>
         </div>
       </div>

@@ -70,7 +70,7 @@ export default function CapabilitiesPage() {
         eyebrow="Capabilities"
         headline="Poultry welfare & production"
         accentLine="intelligence, on one platform."
-        sub="AI poultry monitoring for commercial farms — environmental sensors, computer vision, acoustic welfare signals, gut-health intelligence, production reporting, and early disease alerts running continuously in every house."
+        sub="AI poultry monitoring for your farm — environmental sensors, computer vision, acoustic welfare signals, gut-health intelligence, production reporting, and early disease alerts running continuously in every house."
       />
 
       {/* Honesty strip — how we validate before something ships to production */}

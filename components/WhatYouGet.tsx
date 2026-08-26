@@ -781,9 +781,9 @@ export default function WhatYouGet() {
       <Block
         idx="01"
         label="Sensing"
-        title="Every signal from every house."
-        body="Sensors and edge cameras on every house, capturing every signal around the clock."
-        chips={["LoRaWAN backbone", "Edge-first", "24/7 capture"]}
+        title="Your farm's heartbeat, measured continuously."
+        body="Environmental sensors, cameras, acoustics, ammonia and CO₂ — a full pulse read of your farm's rhythm, running around the clock. We're hardware-agnostic — bring your own sensors from any vendor, or we supply at the lowest cost possible."
+        chips={["Multi-modal", "Hardware-agnostic", "24/7 capture"]}
         mock={<SensingPanel />}
       />
       <Block

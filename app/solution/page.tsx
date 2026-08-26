@@ -8,7 +8,7 @@ import { pageLastModified, formatDisplayDate } from "@/lib/pageMeta";
 export const metadata: Metadata = {
   title: "AI Poultry Monitoring Platform — Welfare, Production & Disease Alerts",
   description:
-    "AI poultry monitoring platform for commercial farms. Environmental sensors, computer vision, acoustic welfare signals, production intelligence, and early disease alerts on WhatsApp.",
+    "AI poultry monitoring platform for farms of every size. Environmental sensors, computer vision, acoustic welfare signals, production intelligence, and early disease alerts on WhatsApp.",
   alternates: { canonical: "/solution" }
 };
 
@@ -92,7 +92,7 @@ export default function SolutionPage() {
               </h2>
             </div>
             <p className="font-sans text-[0.9375rem] leading-relaxed text-on-surface-variant" style={{ maxWidth: 460 }}>
-              SenseAgri AI is an end-to-end poultry monitoring and decision intelligence platform. Sensors capture every signal in the house, on-farm AI interprets it, and the cloud delivers decisions to your phone — one continuous loop, running on every house.
+              SenseAgri AI is an end-to-end poultry monitoring and intelligence platform. Sensors capture every signal in the house, on-farm AI interprets it, and the cloud delivers decisions to your phone — one continuous loop, running on every house.
             </p>
           </div>
 

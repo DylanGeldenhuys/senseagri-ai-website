@@ -9,7 +9,7 @@ import { pageLastModified, formatDisplayDate } from "@/lib/pageMeta";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "How SenseAgri AI's poultry monitoring platform works — sensors, causal AI, integrations, Partner Programme and hardware. Answers for commercial poultry farms in South Africa.",
+    "How SenseAgri AI's poultry monitoring platform works — sensors, causal AI, integrations, Partner Programme and hardware. Answers for poultry farms of every size in South Africa.",
   alternates: { canonical: "/faq" }
 };
 
