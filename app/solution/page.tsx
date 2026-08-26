@@ -8,7 +8,7 @@ import { pageLastModified, formatDisplayDate } from "@/lib/pageMeta";
 export const metadata: Metadata = {
   title: "AI Poultry Monitoring Platform — Welfare, Production & Disease Alerts",
   description:
-    "AI poultry monitoring platform for commercial farms. Environmental sensors, computer vision, acoustic welfare signals, production intelligence, and early disease alerts on WhatsApp.",
+    "AI poultry monitoring platform for farms of every size. Environmental sensors, computer vision, acoustic welfare signals, production intelligence, and early disease alerts on WhatsApp.",
   alternates: { canonical: "/solution" }
 };
 
